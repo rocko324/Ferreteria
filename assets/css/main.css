@@ -231,7 +231,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #008374;
+  --background-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   transition: all 0.5s;
@@ -289,7 +289,16 @@ h6 {
 
 .header .branding {
   min-height: 60px;
-  padding: 10px 0;
+  padding-right: 200px; /* Añade espacio solo a la izquierda */
+  margin-left: 0; /* Si hay margen, lo eliminamos */
+  background: #008374;
+  
+}
+.header .branding-1 {
+  padding-right: 100px; /* Añade espacio solo a la izquierda */
+  min-height: 60px;
+  margin-left: 0; /* Si hay margen, lo eliminamos */
+  
 }
 
 .header .logo {
@@ -326,7 +335,9 @@ h6 {
   .navmenu {
     padding: 0;
   }
-
+  .navmenu-1 {
+    padding: 0;
+  }
   .navmenu ul {
     margin: 0;
     padding: 0;
@@ -334,22 +345,54 @@ h6 {
     list-style: none;
     align-items: center;
   }
-
+  .navmenu-1 ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
   .navmenu li {
+    position: relative;
+  }
+  .navmenu-1 li {
     position: relative;
   }
 
   .navmenu>ul>li {
     white-space: nowrap;
-    padding: 15px 14px;
+    padding: 10px 29px;
+    padding-left: 22px;
+  }
+  .navmenu-1>ul>li {
+    white-space: nowrap;
+    padding: 12px 29px;
+    padding-left: 22px;
   }
 
   .navmenu>ul>li:last-child {
     padding-right: 0;
   }
+  .navmenu-1>ul>li:last-child {
+    padding-right: 0;
+  }
 
   .navmenu a,
   .navmenu a:focus {
+    color: var(--nav-color);
+    font-size: 15px;
+    padding: 0 2px;
+    font-family: var(--nav-font);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
+  .navmenu-1 a,
+  .navmenu-1 a:focus {
     color: var(--nav-color);
     font-size: 15px;
     padding: 0 2px;
@@ -395,8 +438,55 @@ h6 {
   .navmenu .active:focus {
     color: var(--nav-color);
   }
+  
+  .navmenu-1 a i,
+  .navmenu-1 a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
 
+  .navmenu-1>ul>li>a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .navmenu-1 a:hover:before,
+  .navmenu-1 li:hover>a:before,
+  .navmenu-1 .active:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .navmenu-1 li:hover>a,
+  .navmenu-1 .active,
+  .navmenu-1 .active:focus {
+    color: var(--nav-color);
+  }
   .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+  .navmenu-1 .dropdown-1 ul {
     margin: 0;
     padding: 10px 0;
     background: var(--nav-dropdown-background-color);
@@ -415,8 +505,17 @@ h6 {
   .navmenu .dropdown ul li {
     min-width: 200px;
   }
+  .navmenu-1 .dropdown-1 ul li {
+    min-width: 200px;
+  }
 
   .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+  .navmenu-1 .dropdown-1 ul a {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
@@ -426,10 +525,18 @@ h6 {
   .navmenu .dropdown ul a i {
     font-size: 12px;
   }
+  .navmenu-1 .dropdown-1 ul a i {
+    font-size: 12px;
+  }
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+  .navmenu-1 .dropdown-1 ul a:hover,
+  .navmenu-1 .dropdown-1 ul .active:hover,
+  .navmenu-1 .dropdown-1 ul li:hover>a {
     color: var(--nav-dropdown-hover-color);
   }
 
@@ -438,8 +545,18 @@ h6 {
     top: 100%;
     visibility: visible;
   }
+  .navmenu-1 .dropdown-1:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
 
   .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+  .navmenu-1 .dropdown-1 .dropdown-1 ul {
     top: 0;
     left: -90%;
     visibility: hidden;
@@ -452,6 +569,13 @@ h6 {
     visibility: visible;
   }
 }
+.navmenu-1 .dropdown-1 .dropdown-1:hover>ul {
+  opacity: 1;
+  top: 0;
+  left: -100%;
+  visibility: visible;
+}
+
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
@@ -576,6 +700,96 @@ h6 {
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+
+
+
+  .navmenu-1 {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu-1 ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    box-shadow: none;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+
+  .navmenu-1 a,
+  .navmenu-1 a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu-1 a i,
+  .navmenu-1 a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu-1 a i:hover,
+  .navmenu-1 a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu-1 a:hover,
+  .navmenu-1 .active,
+  .navmenu-1 .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu-1 .active i,
+  .navmenu-1 .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu-1 .dropdown-1 ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu-1 .dropdown-1 ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu-1 .dropdown-1>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
   }
 }
 
@@ -2848,4 +3062,119 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+.facebook{
+  background: blue;
+  padding: 6px;
+  border-radius: 10px;
+  color: white;
+}
+.instagram{
+  background:#FF33AC;
+  padding: 6px;
+  border-radius: 10px;
+  color: white;
+}
+.sub-menu-1
+{
+  display: block;
+position: absolute;
+background: rgb(0,100,0);
+margin-top: 15px;
+margin-left: -15px;
+}
+.navmenu ul li:hover.sub-menu-1
+{
+ display: block;
+position: absolute;
+background: rgb(0,100,0);
+margin-top: 15px;
+margin-left: -15px;
+}
+.navmenu ul li:hover.sub-menu-1 ul
+{
+ display: block;
+ margin: 10px;
+}
+.syslinnovation{
+margin-left: 190px;
+}
+
+.container-2{
+  width: 580px;
+  position: relative;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo_img{
+  width: 250px;
+}
+
+.form{
+  padding: 10px;
+}
+
+.form__usuario,
+.form__clave{
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+}
+.usuario, .clave{
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  border-bottom: solid #222 2px;
+}
+.ver_clave{
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.boton{
+  background: green;
+  padding: 15px 25px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form__boton{
+  display: flex;
+  justify-content: flex-start;
+}
+#container-page-registration{
+  background-image: url(../assets/img/font-registration.jpg);
+}
+#form-registration{
+  min-height: 900px;
+  background-color: rgba(255,255,255,.95);
+  padding-top: 120px;
+}
+#container-form{
+  width: 200%;
+  padding: 40px;
+  background-color: #333;
+  border-radius: 7px;
+}
+.tittles-pages-logo{
+  font-family: "FontFamilyLogo";
+}
+.input-group-addon{
+  padding: 6px 12px;
+font-size: 14px;
+font-weight: 400;
+line-height: 1;
+text-align: center;
+background-color: #eee;
+border: 1px solid #ccc;
+border-radius: 4px;
 }
