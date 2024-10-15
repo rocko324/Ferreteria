@@ -73,7 +73,7 @@ include ('layout/header.php');
     <section id="clients" class="clients section">
     <div class="container swiper">
         <div class="slider-wrapper">
-            <h1 style="text-align: center;">Nuestras Categorias</h1>
+            <h1 style="text-align: center;">Nuestras Categorias floroooo</h1>
             <div class="card-list swiper-wrapper">
                 <div style="text-align: center;" class="card-item swiper-slide">
                     <img  style="width: 100px; text-align: center;" onclick="document.location.href='Construccion.html'"  src="assets/img/arquitecto.png" >
