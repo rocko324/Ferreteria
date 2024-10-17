@@ -900,11 +900,11 @@ include ('layout/header.php');
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header" style="width: 600px;background: #fff;">
+        <div class="modal-header">
           
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="width: 600px;background: #fff;">
+        <div class="modal-body">
         <div class="login-container">
     <div class="neon-frame">
         <div class="neon-corner top-left"></div>
@@ -931,7 +931,7 @@ include ('layout/header.php');
 </div> 
     </div>
         </div>
-        <div class="modal-footer" style="width: 600px;background: #fff;">
+        <div class="modal-footer" >
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           
         </div>
