@@ -901,10 +901,10 @@ include ('layout/header.php');
     <div class="modal-dialog">
       <div class="modal-content"  style="width: 70%;">
         <div class="modal-header">
-          
+          style="width: 70%;"
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="background: #222;" >
         <div class="login-container">
     <div class="neon-frame">
         <div class="neon-corner top-left"></div>
