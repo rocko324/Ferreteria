@@ -905,42 +905,6 @@ include ('layout/header.php');
         </div>
         <div class="modal-body" style="width: 600px;background: #fff;">
           
-    <div class="container-2">
-      <div class="logo">
-        <img class="logo_img" src="assets/img/logo.svg" alt="">
-    </div>
-        <form action="" class="form">
-            <div class="form__usuario">
-                <label for="">Usuario</label>
-                <input type="text" class="usuario">
-            </div>
-            <div class="form__clave">
-                <label for="">Contraseña</label>
-                <input id="clave" type="password" class="clave">
-            </div>
-            <div class="form__boton">
-                <button type="submit" class="btn btn-success btn-block" >Ingresar</button>
-            </div>
-        </form>
-    </div>
-        </div>
-        <div class="modal-footer" style="width: 600px;background: #fff;">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header" style="width: 600px;background: #fff;">
-          
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" style="width: 600px;background: #fff;">
-        
         <div class="login-container">
     <div class="neon-frame">
         <div class="neon-corner top-left"></div>
@@ -965,6 +929,97 @@ include ('layout/header.php');
         </div>
     </form>
 </div>
+        
+    </div>
+        </div>
+        <div class="modal-footer" style="width: 600px;background: #fff;">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="width: 600px;background: #fff;">
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="width: 600px;background: #fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                   <br><br>
+                    <div id="container-form">
+                    
+                       <p style="color:#fff;" class="text-center lead">Debera de llenar todos los campos para registrarse</p>
+                       <br><br>
+                       <form class="form-horizontal FormCatElec" action="process/regclien.php" role="form" method="post" data-form="save">
+                           <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese su número de DNI" required name="clien-nit" data-toggle="tooltip" data-placement="top" title="Ingrese su número de DNI." maxlength="30" pattern="[0-9-]{14,30}">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese su nombre de usuario" required name="clien-name" data-toggle="tooltip" data-placement="top" title="Ingrese su nombre. Máximo 9 caracteres (solamente letras)" pattern="[a-zA-Z]{1,9}" maxlength="9">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese sus nombres" required name="clien-fullname" data-toggle="tooltip" data-placement="top" title="Ingrese sus nombres.(solamente letras)" pattern="[a-zA-Z ]{1,50}" maxlength="50">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese sus apellidos" required name="clien-lastname" data-toggle="tooltip" data-placement="top" title="Ingrese sus apellido(solamente letras)" pattern="[a-zA-Z ]{1,50}" maxlength="50">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                                <input class="form-control all-elements-tooltip" type="password" placeholder="Introdusca una contraseña" required name="clien-pass" data-toggle="tooltip" data-placement="top" title="Defina una contraseña para iniciar sesión">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-home"></i></div>
+                                <input class="form-control all-elements-tooltip" type="text" placeholder="Ingrese su dirección" required name="clien-dir" data-toggle="tooltip" data-placement="top" title="Ingrese la direción en la reside actualmente" maxlength="100">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-mobile"></i></div>
+                                <input class="form-control all-elements-tooltip" type="tel" placeholder="Ingrese su número telefónico" required name="clien-phone" maxlength="11" pattern="[0-9]{8,11}" data-toggle="tooltip" data-placement="top" title="Ingrese su número telefónico. Mínimo 8 digitos máximo 11">
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <div class="input-group">
+                                <div class="input-group-addon"><i class="fa fa-at"></i></div>
+                                <input class="form-control all-elements-tooltip" type="email" placeholder="Ingrese su Email" required name="clien-email" data-toggle="tooltip" data-placement="top" title="Ingrese la dirección de su Email" maxlength="50">
+                              </div>
+                            </div>
+                            <br>
+                            <p><button type="submit" class="btn btn-success btn-block"><i class="fa fa-pencil"></i>&nbsp; Registrarse</button></p>
+                            <div class="ResForm" style="width: 100%; color: #fff; text-align: center; margin: 0;"></div>
+                        </form> 
+                    </div> 
+                </div>
+            </div>
+        </div>  
     </div>
         </div>
         <div class="modal-footer" style="width: 600px;background: #fff;">
