@@ -895,46 +895,35 @@ include ('layout/header.php');
     </section><!-- /Contact Section -->
 
   </main>
-
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabe" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content"  style="width: 70%;">
-        <div class="modal-header">
-          style="width: 70%;"
+      <div class="modal-content">
+        <div class="modal-header" style="width: 600px;background: #fff;">
+          
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="background: #222;" >
-        <div class="login-container">
-    <div class="neon-frame">
-        <div class="neon-corner top-left"></div>
-        <div class="neon-corner top-right"></div>
-        <div class="neon-corner bottom-left"></div>
-        <div class="neon-corner bottom-right"></div>
-    </div>
-    <h2>Login</h2>
-    <form>
-        <div class="input-box">
-            <input type="text" required>
-            <label>Username</label>
-        </div>
-        <div class="input-box">
-            <input type="password" required>
-            <label>Password</label>
-        </div>
-        <button type="submit" class="neon-button">Sign In</button>
-        <div class="login-links">
-            <a href="#">Forgot Password?</a>
-            <a href="#">Sign Up</a>
-        </div>
-    </form>
-</div> 
-    </div>
-        </div>
-        <div class="modal-footer"  style="width: 350px;">
-        
+        <div class="modal-body" style="width: 600px;background: #fff;">
           
+    <div class="container-2">
+      <div class="logo">
+        <img class="logo_img" src="assets/img/logo.svg" alt="">
+    </div>
+        <form action="" class="form">
+            <div class="form__usuario">
+                <label for="">Usuario</label>
+                <input type="text" class="usuario">
+            </div>
+            <div class="form__clave">
+                <label for="">Contraseña</label>
+                <input id="clave" type="password" class="clave">
+            </div>
+            <div class="form__boton">
+                <button type="submit" class="btn btn-success btn-block" >Ingresar</button>
+            </div>
+        </form>
+    </div>
         </div>
+        
       </div>
     </div>
   </div>
