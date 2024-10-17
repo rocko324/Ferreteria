@@ -3179,6 +3179,7 @@ border: 1px solid #ccc;
 border-radius: 4px;
 }
 .login-container {
+  margin: auto;
   position: relative;
   width: 300px;
   padding: 40px 30px;
