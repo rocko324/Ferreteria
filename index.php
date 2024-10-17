@@ -932,7 +932,7 @@ include ('layout/header.php');
         
     </div>
         </div>
-        <div class="modal-footer" style="width: 400px;background: #fff;">
+        <div class="modal-footer" style="width: 500px;background: #fff;">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           
         </div>
