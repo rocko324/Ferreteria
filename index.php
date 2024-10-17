@@ -2,13 +2,13 @@
 <html lang="en">
 
 <?php
-include_once ('layout/head.php');
-?>
 
-<body class="index-page">
-  
-  
+
+include ('layout/head.php');
+?>
 <?php
+
+
 include ('layout/header.php');
 ?>
 
