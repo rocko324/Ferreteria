@@ -899,11 +899,11 @@ include ('layout/header.php');
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header" style="width: 400px;background: #fff;">
+        <div class="modal-header" style="width: 500px;background: #fff;">
           
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="width: 400px;background: #fff;">
+        <div class="modal-body" style="width: 500px;background: #fff;">
           
         <div class="login-container">
     <div class="neon-frame">
